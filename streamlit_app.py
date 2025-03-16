@@ -1,19 +1,24 @@
 import streamlit as st
+import datetime
 
-# Assuming `streamlit_app.py` is the core of the app and contains the function `display_wedding_savings_calculator`
+# This is the main function that will be run when the app starts
+def display_wedding_savings_calculator():
+    # Your wedding savings calculator code here
+    st.write("This is where your savings calculator logic will go.")
+    # Example: Placeholder code for wedding savings calculator
+    st.subheader("Wedding Savings Calculator")
 
 def main():
-    st.title("🎈 New App")
+    # Set the title of the app
+    st.title("🎈 Wedding Savings App")
 
-    # Use a unique key for the selectbox widget
+    # Select a page using a selectbox
     page = st.selectbox("Choose a Page", ["Home", "Wedding Savings"], key="page_selectbox")
 
     if page == "Home":
         st.write("Welcome to the home page!")
-
     elif page == "Wedding Savings":
-        import streamlit_app  # Import the core logic here
-        streamlit_app.display_wedding_savings_calculator()
+        display_wedding_savings_calculator()  # Call the function directly here
 
 if __name__ == "__main__":
     main()
